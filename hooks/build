@@ -1,0 +1,13 @@
+#!/bin/bash
+set -ex
+
+DOCKER_IMAGE=${DOCKER_REPO/#index.docker.io\/}
+
+docker image build \
+    --build-arg VCS_REF="$GIT_SHA1" \
+    --build-arg BUILD_DATE="$(date --rfc-3339 ns)" \
+    --build-arg DOCKER_IMAGE="$DOCKER_IMAGE" \
+    --build-arg BASE_IMAGE_REPO="$BASE_IMAGE_REPO" \
+    --build-arg BASE_IMAGE_TAG="$DOCKER_TAG" \
+    --tag "$DOCKER_REPO:$DOCKER_TAG" \
+    .

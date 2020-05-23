@@ -1,0 +1,13 @@
+#!/bin/bash
+set -ex
+
+# Version control tags
+# We append BUILD_DATE to the image tag.
+
+BUILD_DATE=`date -u +%Y.%m.%d`
+
+TAG="$DOCKER_REPO:$DOCKER_TAG"
+NEWTAG="$TAG.$BUILD_DATE"
+
+docker tag "$TAG" "$NEWTAG"
+docker push "$NEWTAG"
