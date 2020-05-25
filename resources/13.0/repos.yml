@@ -2,8 +2,10 @@
 $SOURCES/odoo:
     remotes:
         origin: https://github.com/odoo/odoo.git
+        adhoc-dev: https://github.com/adhoc-dev/odoo.git
     merges:
         - origin $ODOO_VERSION
+        - adhoc-dev 13.0-invoice-report-v2-merge-citi
     target: origin $ODOO_VERSION
 
 ingadhoc-odoo-argentina:
@@ -26,7 +28,6 @@ ingadhoc-argentina-sale:
         origin: https://github.com/ingadhoc/argentina-sale.git
     merges:
         - origin $ODOO_VERSION
-        - origin refs/pull/43/head
     target: origin $ODOO_VERSION
 
 ingadhoc-miscellaneous:
