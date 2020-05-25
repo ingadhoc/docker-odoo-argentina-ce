@@ -1,7 +1,14 @@
 ## Ingadhoc
+$SOURCES/odoo:
+    remotes:
+        origin: https://github.com/odoo/odoo.git
+    merges:
+        - origin $ODOO_VERSION
+        - origin refs/pull/50182/head
+        - origin refs/pull/50882/head
+    target: origin $ODOO_VERSION
+
 ingadhoc-odoo-argentina:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/odoo-argentina.git
     merges:
@@ -9,17 +16,22 @@ ingadhoc-odoo-argentina:
     target: origin $ODOO_VERSION
 
 ingadhoc-odoo-argentina-ce:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/odoo-argentina-ce.git
     merges:
         - origin $ODOO_VERSION
+        - origin refs/pull/4/head
+    target: origin $ODOO_VERSION
+
+ingadhoc-argentina-sale:
+    remotes:
+        origin: https://github.com/ingadhoc/argentina-sale.git
+    merges:
+        - origin $ODOO_VERSION
+        - origin refs/pull/43/head
     target: origin $ODOO_VERSION
 
 ingadhoc-miscellaneous:
-  defaults:
-    depth: 1
   remotes:
     origin: https://github.com/ingadhoc/miscellaneous.git
   merges:
@@ -27,8 +39,6 @@ ingadhoc-miscellaneous:
   target: origin $ODOO_VERSION
 
 ingadhoc-account-payment:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/account-payment.git
     merges:
@@ -36,8 +46,6 @@ ingadhoc-account-payment:
     target: origin $ODOO_VERSION
 
 ingadhoc-account-financial-tools:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/account-financial-tools.git
     merges:
@@ -45,8 +53,6 @@ ingadhoc-account-financial-tools:
     target: origin $ODOO_VERSION
 
 ingadhoc-aeroo_reports:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/aeroo_reports.git
     merges:
@@ -54,8 +60,6 @@ ingadhoc-aeroo_reports:
     target: origin $ODOO_VERSION
 
 ingadhoc-account-invoicing:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/account-invoicing.git
     merges:
@@ -63,8 +67,6 @@ ingadhoc-account-invoicing:
     target: origin $ODOO_VERSION
 
 ingadhoc-partner:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/partner.git
     merges:
@@ -72,8 +74,6 @@ ingadhoc-partner:
     target: origin $ODOO_VERSION
 
 ingadhoc-account-analytic:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/account-analytic.git
     merges:
@@ -81,8 +81,6 @@ ingadhoc-account-analytic:
     target: origin $ODOO_VERSION
 
 ingadhoc-hr:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/hr.git
     merges:
@@ -90,8 +88,6 @@ ingadhoc-hr:
     target: origin $ODOO_VERSION
 
 ingadhoc-product:
-  defaults:
-    depth: 1
   remotes:
     origin: https://github.com/ingadhoc/product.git
   merges:
@@ -99,8 +95,6 @@ ingadhoc-product:
   target: origin $ODOO_VERSION
 
 ingadhoc-multi-company:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/multi-company.git
     merges:
@@ -108,8 +102,6 @@ ingadhoc-multi-company:
     target: origin $ODOO_VERSION
 
 ingadhoc-purchase:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/purchase.git
     merges:
@@ -117,8 +109,6 @@ ingadhoc-purchase:
     target: origin $ODOO_VERSION
 
 ingadhoc-stock:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/stock.git
     merges:
@@ -126,8 +116,6 @@ ingadhoc-stock:
     target: origin $ODOO_VERSION
 
 ingadhoc-website:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/website.git
     merges:
@@ -135,8 +123,6 @@ ingadhoc-website:
     target: origin $ODOO_VERSION
 
 ingadhoc-sale:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/sale.git
     merges:
@@ -144,8 +130,6 @@ ingadhoc-sale:
     target: origin $ODOO_VERSION
 
 ingadhoc-project:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/project.git
     merges:
@@ -153,26 +137,13 @@ ingadhoc-project:
     target: origin $ODOO_VERSION
 
 ingadhoc-argentina-reporting:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/argentina-reporting.git
     merges:
         - origin $ODOO_VERSION
     target: origin $ODOO_VERSION
 
-ingadhoc-argentina-sale:
-    defaults:
-        depth: 1
-    remotes:
-        origin: https://github.com/ingadhoc/argentina-sale.git
-    merges:
-        - origin $ODOO_VERSION
-    target: origin $ODOO_VERSION
-
 ingadhoc-reporting-engine:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/reporting-engine.git
     merges:
@@ -180,8 +151,6 @@ ingadhoc-reporting-engine:
     target: origin $ODOO_VERSION
 
 ingadhoc-multi-store:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/multi-store.git
     merges:
@@ -189,8 +158,6 @@ ingadhoc-multi-store:
     target: origin $ODOO_VERSION
 
 ingadhoc-manufacture:
-    defaults:
-        depth: 1
     remotes:
         origin: https://github.com/ingadhoc/manufacture.git
     merges:
