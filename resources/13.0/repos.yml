@@ -163,3 +163,38 @@ ingadhoc-manufacture:
         - origin $ODOO_VERSION
     target: origin $ODOO_VERSION
 
+oca-web:
+    remotes:
+        origin: https://github.com/oca/web.git
+    merges:
+        - origin $ODOO_VERSION
+    target: origin $ODOO_VERSION
+
+oca-account-financial-tools:
+    remotes:
+        origin: https://github.com/oca/account-financial-tools.git
+    merges:
+        - origin $ODOO_VERSION
+    target: origin $ODOO_VERSION
+
+oca-account-financial-reporting:
+    remotes:
+        origin: https://github.com/oca/account-financial-reporting.git
+    merges:
+        - origin $ODOO_VERSION
+    target: origin $ODOO_VERSION
+
+oca-server-ux:
+    remotes:
+        origin: https://github.com/oca/server-ux.git
+    merges:
+        - origin $ODOO_VERSION
+    target: origin $ODOO_VERSION
+
+oca-reporting-engine:
+    remotes:
+        origin: https://github.com/oca/reporting-engine.git
+    merges:
+        - origin $ODOO_VERSION
+    target: origin $ODOO_VERSION
+
