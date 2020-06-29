@@ -7,6 +7,9 @@ ARG DOCKER_IMAGE
 ARG DOCKER_TAG_SUFFIX
 
 # Add other dependencies
+# ligado a esto de aca https://github.com/pysimplesoap/pysimplesoap/pull/187#issuecomment-651193880 y este commit  https://github.com/ingadhoc/odoo-argentina/commit/13d431883c5e33a1f679d0ec537cf973723453c8
+# dejamos de usar stable_py3k
+
 USER root
 RUN apt-get update \
     && apt-get install -y \
@@ -18,7 +21,7 @@ RUN apt-get update \
     python-m2crypto  \
     python-httplib2 \
     # pip dependencies that require build deps
-    && sudo -H -u odoo pip install --user --no-cache-dir pyOpenSSL M2Crypto httplib2>=0.7 git+https://github.com/pysimplesoap/pysimplesoap@stable_py3k \
+    && sudo -H -u odoo pip install --user --no-cache-dir pyOpenSSL M2Crypto httplib2>=0.7 git+https://github.com/pysimplesoap/pysimplesoap@a330d9c4af1b007fe1436f979ff0b9f66613136e \
     # purge
     && apt-get purge -yqq build-essential '*-dev' make || true \
     && apt-get -yqq autoremove \
