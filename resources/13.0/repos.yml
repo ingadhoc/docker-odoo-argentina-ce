@@ -5,8 +5,6 @@ $SOURCES/odoo:
         adhoc-dev: https://github.com/adhoc-dev/odoo.git
     merges:
         - origin $ODOO_VERSION
-        - origin refs/pull/50882/head
-        - origin refs/pull/50182/head
     target: origin $ODOO_VERSION
 
 ingadhoc-odoo-argentina:
@@ -21,7 +19,6 @@ ingadhoc-odoo-argentina-ce:
         origin: https://github.com/ingadhoc/odoo-argentina-ce.git
     merges:
         - origin $ODOO_VERSION
-        - origin refs/pull/4/head
     target: origin $ODOO_VERSION
 
 ingadhoc-argentina-sale:
